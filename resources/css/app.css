@@ -113,3 +113,5 @@
 .overflow-x-auto:hover {
     @apply scrollbar-thumb-border scrollbar-thin;
 }
+
+

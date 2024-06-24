@@ -16,7 +16,7 @@
                         <x-table.head>#</x-table.head>
                         <x-table.head>Name</x-table.head>
                         <x-table.head>Email</x-table.head>
-                        {{-- <x-table.head class="text-center">Action</x-table.head> --}}
+                        <x-table.head class="text-center">Action</x-table.head>
                     </x-table.row>
                 </x-table.header>
                 <x-table.body>
@@ -25,9 +25,9 @@
                             <x-table.cell>{{ $loop->iteration }}</x-table.cell>
                             <x-table.cell>{{ $user->name }}</x-table.cell>
                             <x-table.cell>{{ $user->email }}</x-table.cell>
-                            {{-- <x-table.cell class="text-center">
-                                    <x-button href="{{ route('users.edit', $user) }}">Edit</x-button>
-                                </x-table.cell> --}}
+                            <x-table.cell class="text-center">
+                                <x-button href="{{ route('users.edit', $user) }}">Edit</x-button>
+                            </x-table.cell>
                         </x-table.row>
                     @endforeach
                 </x-table.body>

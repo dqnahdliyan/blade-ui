@@ -1,4 +1,4 @@
-<form class="flex flex-col justify-center gap-4 p-6 sm:flex-row sm:justify-between sm:items-center ">
+<form class="flex flex-col justify-center gap-2 px-6 sm:flex-row sm:justify-between sm:items-center ">
     <div>
         <x-select class="w-20" name="perPage" id="perPage" onchange="this.form.submit()">
             <option {{ Request::get('perPage') == 10 ? 'selected' : '' }} value="10">10</option>

@@ -2,10 +2,10 @@
   Use the following to reproduce a Tailwind UI Select field with Tom Select
 */
 
-@import "tom-select/dist/css/tom-select";
+@import "tom-select/dist/css/tom-select.min.css";
 
 .ts-control {
-    @apply flex w-full h-10 px-3 py-2 text-sm transition duration-200 border rounded-md border-input bg-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-within:outline-none focus-within:border-primary/70 focus-within:ring focus-within:ring-ring disabled:cursor-not-allowed disabled:opacity-50;
+    @apply flex w-full h-10 px-3 py-2 text-sm transition duration-200 border rounded-md border-input !bg-background !text-foreground placeholder:text-muted-foreground focus-within:outline-none focus-within:border-primary/70 focus-within:ring focus-within:ring-ring disabled:cursor-not-allowed disabled:opacity-50;
 }
 
 .ts-control input {
@@ -29,25 +29,26 @@
 }
 
 .ts-dropdown {
-    @apply mt-2 border border-t rounded-md border-border;
+    @apply mt-2 border border-t rounded-md border-border bg-popover text-popover-foreground;
 }
 
 .ts-dropdown [data-selectable].option,
 .ts-dropdown .no-results {
     @apply py-2;
 }
+
 .ts-dropdown [data-selectable].option:first-child {
-    @apply rounded-t-md;
+    @apply rounded-t-sm;
 }
 
 .ts-dropdown [data-selectable].option:last-child {
-    @apply rounded-b-md;
+    @apply rounded-b-sm;
 }
 
 .ts-dropdown .create:hover,
 .ts-dropdown .option:hover,
 .ts-dropdown .active {
-    @apply bg-accent;
+    @apply !bg-accent !text-accent-foreground transition;
 }
 
 .ts-dropdown .spinner {
